@@ -20,7 +20,7 @@ public class Sort  extends BaseAmazonClassA{
 	 @FindBy(css = "#s-result-sort-select")
 	 WebElement Drop;
  
- public Sort() {
+   public Sort() {
 		 
 		 PageFactory.initElements(driver, this);
 	 }
@@ -32,45 +32,19 @@ public class Sort  extends BaseAmazonClassA{
 	  SearchBtn.click();
   
 }
-  public void drop() { 
+  public void drop() throws InterruptedException { 
 	  Select obj=new Select(Drop); 
    obj.selectByVisibleText("Price: Low to high"); 
-   // obj.selectByValue("e-desc-rank"); obj.selectByIndex(4);
+   Thread.sleep(2000);
+   obj.selectByVisibleText("Featured");
+   Thread.sleep(2000);
+   obj.selectByVisibleText("Price: High to low");
+   Thread.sleep(2000);
+   obj.selectByVisibleText("Avg. customer review");
+   Thread.sleep(2000);
+  
+   obj.selectByVisibleText("Newest arrivals");  
    }
-  
  
-  public void numberProducts() {
-	  
-//		giving result as 0 not 60
-//	List <WebElement> objList=driver.findElements(By.cssSelector("#search > div.s-desktop-width-max.s-desktop-content.s-wide-grid-style-t1.s-opposite-dir.s-wide-grid-style.sg-row > div.sg-col-20-of-24.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span.rush-component.s-latency-cf-section > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(76) > div > div > span > span.s-pagination-item.s-pagination-selected"));
-//	System.out.println("Count of number of products per page is:"+objList.size());
-	
-//		giving result as 0 not 60  
-//	List products = driver.findElements(By.cssSelector("#search > div.s-desktop-width-max.s-desktop-content.s-wide-grid-style-t1.s-opposite-dir.s-wide-grid-style.sg-row > div.sg-col-20-of-24.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span.rush-component.s-latency-cf-section > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(76) > div > div > span > span.s-pagination-item.s-pagination-selected"));
-//	System.out.println("Count of number of products per page is:"+products.size() );
-	
-    //(not finding element with classname)
-	//List <WebElement> objList= driver.findElements(By.className("a-size-base-plus a-color-base a-text-normal"));
-//	System.out.println("Count of number of products per page is:"+objList.size());
-	  
-	 
-//	giving result as 1 not 60 
-	 List <WebElement> objList= driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div"));
-	 System.out.println("Count of number of products per page is:"+objList.size()); 
-	 
-	// searching element locator for second product, id=MAIN-SEARCH_RESULTS-4  
-//		giving result as 0 not 60
-//	 List <WebElement> objList= driver.findElements(By.id("MAIN-SEARCH_RESULTS-4"));
-//	System.out.println("Count of number of products per page is:"+objList.size());  
-	
- // searching element locator for second product, css #search > div.s-desktop-width-max.s-desktop-content.s-wide-grid-style-t1.s-opposite-dir.s-wide-grid-style.sg-row > div.sg-col-20-of-24.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span.rush-component.s-latency-cf-section > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(8)
-//		giving result as 0 not 60
-//	  List <WebElement> objList= driver.findElements(By.cssSelector("#search > div.s-desktop-width-max.s-desktop-content.s-wide-grid-style-t1.s-opposite-dir.s-wide-grid-style.sg-row > div.sg-col-20-of-24.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span.rush-component.s-latency-cf-section > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(8)"));
-//	System.out.println("Count of number of products per page is:"+objList.size());  
-  
-  }
-  
- 
-
 
 }

@@ -31,7 +31,7 @@ public class Sorting  extends BaseAmazonClassA {
 		}
 		
 		  @Test(priority=1)
-		  public void Show () throws InterruptedException {
+		public void Sort () throws InterruptedException {
 			 
 		  try {
 				Thread.sleep(1000);
@@ -40,12 +40,7 @@ public class Sorting  extends BaseAmazonClassA {
 	           Thread.sleep(3000);
 	            so.drop();
                Thread.sleep(4000);
-             
-	          so.numberProducts();
-	           Thread.sleep(6000);
-                
-                
-			}
+            }
 		  catch (InterruptedException e) {
  	   	e.printStackTrace();
 		}

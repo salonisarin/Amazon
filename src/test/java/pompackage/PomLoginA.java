@@ -30,8 +30,14 @@ public class PomLoginA extends BaseAmazonClassA {
 	
 	 boolean a= Display.isDisplayed();
 	 System.out.println(a);
+  //   String userName = Display.getText();
+    //System.out.println(userName);
 	 
  }
+     public String getNameLabel() {
+			return Display.getText();
+		}
+ 
 
  public void mousehover() { 
  Actions action = new Actions(driver);

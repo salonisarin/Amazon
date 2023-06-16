@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testLayer.PaginationTest">
+      <class name="testLayer.FilterTest">
         <methods>
-          <include name="initsetup"/>
-          <include name="Show"/>
+          <include name="Filter"/>
           <include name="close"/>
+          <include name="initsetup"/>
         </methods>
-      </class> <!-- testLayer.PaginationTest -->
+      </class> <!-- testLayer.FilterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

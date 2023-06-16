@@ -1,6 +1,7 @@
 package testLayer;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -41,14 +42,13 @@ public class SearchTest extends BaseAmazonClassA{
 		 
 		  
 		  @Test(priority=1, dataProvider="SearchDetails")
-		  public void Show(String s) throws InterruptedException {
+		  public void Search(String s) throws InterruptedException {
 			 
 		  try {
 				Thread.sleep(1000);
 				se.searchOption(s);
 				se.clickBtn();
-	            Thread.sleep(8000);
-
+	            Thread.sleep(5000);
 			}
 		  catch (InterruptedException e) {
  	   	e.printStackTrace();
